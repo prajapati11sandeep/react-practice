@@ -45,7 +45,7 @@ export default function Calculator() {
 							<button name="/" onClick={handleClick}>
 								&divide;
 							</button>
-							<button name="x" onClick={handleClick}>
+							<button name="*" onClick={handleClick}>
 								&times;
 							</button>
 						</div>
