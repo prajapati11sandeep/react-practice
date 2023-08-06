@@ -1,6 +1,6 @@
 # Live Preview
 
-[Click Here](https://app.netlify.com/sites/wonderful-madeleine-dd8ce0/deploys/64cf61b9ccb76100082d10da).
+[Click Here](https://react-projects-practice--wonderful-madeleine-dd8ce0.netlify.app/).
 
 # Getting Started with Create React App
 
