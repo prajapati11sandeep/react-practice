@@ -4,11 +4,16 @@
 	flex-direction: column;
 	margin: 0 auto;
 	padding: 20px 0;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
 
 	.clcInner {
 		border: 2px solid #282b34;
 		border-radius: 6px;
 		overflow: hidden;
+		box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 
 		input {
 			width: 100%;
@@ -19,6 +24,10 @@
 			padding: 0px 20px;
 			background-color: #373d57;
 			color: #fff;
+
+			&::placeholder {
+				color: #fff;
+			}
 
 			/* Chrome, Safari, Edge, Opera */
 			&::-webkit-outer-spin-button,
@@ -46,7 +55,24 @@
 			&:hover {
 				background-color: rgba(40, 43, 52, 0.937);
 			}
+
+			&.success {
+				background-color: rgb(28, 187, 140, 0.5);
+			}
+
+			&.error {
+				background-color: rgb(220, 53, 69, 0.5);
+			}
+
+			&.info {
+				background-color: rgb(59, 125, 221, 0.5);
+			}
 		}
+
+		.keyPad {
+			margin: 0 -5px;
+		}
+
 		.operations,
 		.numbers,
 		.finalAction {
@@ -55,6 +81,12 @@
 			button {
 				width: 25%;
 				padding: 22px 0;
+				border: 2px solid rgba(255, 255, 255, 0.039);
+
+				&.clearBtn,
+				&.resultBtn {
+					width: 50%;
+				}
 			}
 		}
 
@@ -64,4 +96,8 @@
 			}
 		}
 	}
+}
+
+:global(body) {
+	background-color: #19222c;
 }

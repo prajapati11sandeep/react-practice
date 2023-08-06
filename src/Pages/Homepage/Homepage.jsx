@@ -6,13 +6,13 @@ import styles from "./Homepage.module.scss";
 
 export default function Homepage() {
 	return (
-		<div>
+		<>
 			<Navbar />
 			<div className={styles.homePage}>
 				<div className={styles.listGroup}>
 					<NavLink to="calculator">Calculator</NavLink>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
