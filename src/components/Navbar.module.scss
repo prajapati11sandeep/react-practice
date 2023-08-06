@@ -1,0 +1,27 @@
+.header {
+	background-color: #212529;
+	padding: 15px;
+
+	ul {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 8px;
+
+		li {
+			a {
+				text-decoration: none;
+				color: rgba(255, 255, 255, 0.5);
+				border-bottom: 0.25rem solid transparent;
+				font-weight: 700;
+				padding-top: 0.25rem;
+				padding-bottom: 0.25rem;
+
+				&[aria-current] {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

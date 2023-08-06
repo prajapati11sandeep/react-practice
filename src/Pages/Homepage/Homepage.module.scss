@@ -1,0 +1,43 @@
+.homePage {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.listGroup {
+		width: 100%;
+		max-width: 460px;
+		margin-inline: 1.5rem;
+	}
+
+	a {
+		padding: 10px;
+		text-decoration: none;
+		color: #212529;
+		font-weight: 700;
+		padding: 16px 12px;
+		background: #712cf9;
+		color: #fff;
+		border-radius: 4px;
+		width: 100%;
+		display: inline-block;
+		counter-increment: myCounter;
+
+		&::before {
+			content: counter(myCounter);
+			height: 40px;
+			width: 40px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background-color: #a77cff;
+			color: #3c3c3c;
+			margin-right: 16px;
+		}
+
+		&:hover {
+			background-color: #6528e0;
+		}
+	}
+}
