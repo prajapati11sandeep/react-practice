@@ -11,6 +11,7 @@ export default function Homepage() {
 			<div className={styles.homePage}>
 				<div className={styles.listGroup}>
 					<NavLink to="calculator">Calculator</NavLink>
+					<NavLink to="snapshot">Snapshot</NavLink>
 				</div>
 			</div>
 		</>
