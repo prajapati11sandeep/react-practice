@@ -26,6 +26,7 @@ export default function Snapshot() {
 	const filterClickHandler = (e) => {
 		setFilter(e.target.name);
 		setIsValid(true);
+		setInputVal(null);
 	};
 
 	//On input value change
