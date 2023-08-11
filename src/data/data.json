@@ -2,83 +2,88 @@
   "snapshot": [
     {
       "id": "0",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106641528_379ea4d1c7_m.jpg",
-      "imagecategory": "mountain "
-    },
-    {
-      "id": "1",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106166579_c04c42cd1e_m.jpg",
-      "imagecategory": "mountain "
-    },
-    {
-      "id": "2",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106371080_8281f5b482_m.jpg",
-      "imagecategory": "mountain "
-    },
-    {
-      "id": "3",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106370525_31d8dbf1f7_m.jpg",
-      "imagecategory": "mountain "
-    },
-    {
-      "id": "5",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106348344_f1bd222969_m.jpg",
-      "imagecategory": "beach"
-    },
-    {
-      "id": "6",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106234988_ec955df3dd_m.jpg",
-      "imagecategory": "beach"
-    },
-    {
-      "id": "7",
-      "imagepath": "https://farm66.staticflickr.com/65535/53105793514_a47c6eda81_m.jpg",
-      "imagecategory": "beach"
-    },
-    {
-      "id": "8",
-      "imagepath": "https://farm66.staticflickr.com/65535/53105761865_5782700f34_m.jpg",
-      "imagecategory": "beach"
-    },
-    {
-      "id": "9",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106288804_5af8901648_m.jpg",
-      "imagecategory": "bird"
-    },
-    {
-      "id": "10",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106041089_3578126fd1_m.jpg",
-      "imagecategory": "bird"
-    },
-    {
-      "id": "11",
-      "imagepath": "https://farm66.staticflickr.com/65535/53105991364_1d0678bdda_m.jpg",
-      "imagecategory": "bird"
-    },
-    {
-      "id": "12",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106292678_7860e77712_m.jpg",
-      "imagecategory": "bird"
-    },
-    {
-      "id": "13",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106210319_19f4876ef7_m.jpg",
-      "imagecategory": "food"
-    },
-    {
-      "id": "14",
-      "imagepath": "https://farm66.staticflickr.com/65535/53106190560_4f7c3773e2_m.jpg",
-      "imagecategory": "food"
-    },
-    {
-      "id": "15",
-      "imagepath": "https://farm66.staticflickr.com/65535/53105027167_60407d813d_m.jpg",
-      "imagecategory": "food"
+      "imagePath": "https://farm66.staticflickr.com/65535/53106641528_379ea4d1c7_m.jpg",
+      "imageCategory": "mountain "
     },
     {
       "id": "16",
-      "imagepath": "https://farm66.staticflickr.com/65535/53105261725_9a57862359_m.jpg",
-      "imagecategory": "food"
+      "imagePath": "https://farm66.staticflickr.com/65535/53105261725_9a57862359_m.jpg",
+      "imageCategory": "food"
+    },
+    {
+      "id": "12",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106292678_7860e77712_m.jpg",
+      "imageCategory": "bird"
+    },
+    {
+      "id": "2",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106371080_8281f5b482_m.jpg",
+      "imageCategory": "mountain "
+    },
+    {
+      "id": "1",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106166579_c04c42cd1e_m.jpg",
+      "imageCategory": "mountain "
+    },
+    {
+      "id": "3",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106370525_31d8dbf1f7_m.jpg",
+      "imageCategory": "mountain "
+    },
+    {
+      "id": "5",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106348344_f1bd222969_m.jpg",
+      "imageCategory": "beach"
+    },
+    {
+      "id": "6",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106234988_ec955df3dd_m.jpg",
+      "imageCategory": "beach"
+    },
+    {
+      "id": "7",
+      "imagePath": "https://farm66.staticflickr.com/65535/53105793514_a47c6eda81_m.jpg",
+      "imageCategory": "beach"
+    },
+    {
+      "id": "8",
+      "imagePath": "https://farm66.staticflickr.com/65535/53105761865_5782700f34_m.jpg",
+      "imageCategory": "beach"
+    },
+    {
+      "id": "9",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106288804_5af8901648_m.jpg",
+      "imageCategory": "bird"
+    },
+    {
+      "id": "10",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106041089_3578126fd1_m.jpg",
+      "imageCategory": "bird"
+    },
+    {
+      "id": "11",
+      "imagePath": "https://farm66.staticflickr.com/65535/53105991364_1d0678bdda_m.jpg",
+      "imageCategory": "bird"
+    },
+    {
+      "id": "13",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106210319_19f4876ef7_m.jpg",
+      "imageCategory": "food"
+    },
+    {
+      "id": "14",
+      "imagePath": "https://farm66.staticflickr.com/65535/53106190560_4f7c3773e2_m.jpg",
+      "imageCategory": "food"
+    },
+    {
+      "id": "15",
+      "imagePath": "https://farm66.staticflickr.com/65535/53105027167_60407d813d_m.jpg",
+      "imageCategory": "food"
+    },
+    {
+      "id": "17",
+      "imagePath": "https://farm66.staticflickr.com/65535/53104255992_fc4e559584_m.jpg",
+      "imageCategory": "anime"
     }
   ]
 }

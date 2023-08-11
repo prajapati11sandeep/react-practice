@@ -32,6 +32,7 @@
 		width: 100%;
 		position: relative;
 		display: flex;
+
 		input {
 			font-size: 1em;
 			width: 100%;
@@ -59,6 +60,15 @@
 
 			&:hover {
 				background-color: rgba(237, 239, 240, 0.231);
+			}
+		}
+
+		&:global(.error) {
+			animation: shake 0.2s ease-in-out 0s 2;
+			input,
+			button {
+				border-color: #6e2626;
+				color: #6e2626;
 			}
 		}
 	}
@@ -103,14 +113,13 @@
 		ul {
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: space-between;
-			-ms-align-items: flex-start;
 			align-items: flex-start;
+			justify-content: center;
+			gap: 15px;
 			li {
 				width: 220px;
 				height: 165px;
 				overflow: hidden;
-				margin-bottom: 15px;
 				img {
 					height: 100%;
 					width: 100%;
@@ -118,5 +127,24 @@
 				}
 			}
 		}
+	}
+
+	.noResultFound {
+		color: #fff;
+	}
+}
+
+@keyframes shake {
+	0% {
+		margin-left: 0rem;
+	}
+	25% {
+		margin-left: 0.5rem;
+	}
+	75% {
+		margin-left: -0.5rem;
+	}
+	100% {
+		margin-left: 0rem;
 	}
 }
