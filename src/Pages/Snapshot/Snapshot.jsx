@@ -9,6 +9,7 @@ export default function Snapshot() {
 	const [filter, setFilter] = useState("all");
 	const [isValid, setIsValid] = useState(true);
 	const [filterResults, setFilterResults] = useState(data.snapshot);
+	const [inputVal, setInputVal] = useState(null);
 
 	useEffect(() => {
 		if (filter === "all") {
@@ -44,6 +45,7 @@ export default function Snapshot() {
 			const matches = data.snapshot.filter((snap) =>
 				snap.imageCategory.toLowerCase().includes(val)
 			);
+			setInputVal(inputRef.current.value);
 			setFilterResults(matches);
 		} else {
 			setIsValid(false);
@@ -100,11 +102,7 @@ export default function Snapshot() {
 					</div>
 				)}
 				<div className={styles.snapshotFilterTitle}>
-					"
-					{inputRef.current.value.trim().length !== 0
-						? inputRef.current.value
-						: filter}
-					" Images
+					"{inputVal ? inputVal : filter}" Images
 				</div>
 				<div className={styles.snapshotImages}>
 					{filterResults.length !== 0 ? (
