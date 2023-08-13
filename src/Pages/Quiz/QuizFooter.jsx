@@ -27,6 +27,9 @@ export default function QuizFooter({
 					quizIndex={quizIndex}
 					setQuizIndex={setQuizIndex}
 					question={question}
+					totalQuestions={totalQuestions}
+					setResultScreen={setResultScreen}
+					setActiveScreen={setActiveScreen}
 				/>
 			</div>
 			<div className={styles.quizAction}>

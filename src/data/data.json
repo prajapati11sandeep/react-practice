@@ -253,7 +253,7 @@
       ],
       "correctOption": 0,
       "points": 30,
-      "time": "30"
+      "time": "10"
     },
     {
       "question": "When will an effect run if it doesn't have a dependency array?",
@@ -265,7 +265,7 @@
       ],
       "correctOption": 3,
       "points": 20,
-      "time": "30"
+      "time": "10"
     }
   ]
 }

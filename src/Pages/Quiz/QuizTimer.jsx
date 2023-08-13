@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export default function QuizTimer({ question, setQuizIndex, quizIndex }) {
+export default function QuizTimer({
+	question,
+	setQuizIndex,
+	quizIndex,
+	totalQuestions,
+	setResultScreen,
+	setActiveScreen,
+}) {
 	const [time, setTime] = useState(question.time);
 	const [warning, setWarning] = useState(false);
 
@@ -17,12 +24,24 @@ export default function QuizTimer({ question, setQuizIndex, quizIndex }) {
 					}
 				} else {
 					clearInterval(id);
-					setQuizIndex(quizIndex + 1);
+					if (totalQuestions !== quizIndex + 1) {
+						setQuizIndex(quizIndex + 1);
+					} else {
+						setResultScreen(true);
+						setActiveScreen(false);
+					}
 				}
 			}, 1000);
 			return () => clearInterval(id);
 		},
-		[time, quizIndex, setQuizIndex]
+		[
+			time,
+			quizIndex,
+			setQuizIndex,
+			setResultScreen,
+			totalQuestions,
+			setActiveScreen,
+		]
 	);
 
 	useEffect(() => {
