@@ -9,8 +9,9 @@ export default function QuizActiveScreen({
 	totalQuestions,
 	setResultScreen,
 	setActiveScreen,
+	quizIndex,
+	setQuizIndex,
 }) {
-	const [quizIndex, setQuizIndex] = useState(0);
 	const [activeOption, setActiveOption] = useState(null);
 
 	return (

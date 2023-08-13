@@ -10,12 +10,11 @@ import QuizResult from "./QuizResult";
 export default function Quiz() {
 	const [activeScreen, setActiveScreen] = useState(false);
 	const [resultScreen, setResultScreen] = useState(false);
+	const [quizIndex, setQuizIndex] = useState(0);
 
 	const quizData = data.questions;
 	const totalQuestions = quizData.length;
 	const maxPoints = quizData.reduce((prev, curr) => prev + curr.points, 0);
-
-	console.log(maxPoints);
 
 	return (
 		<>
@@ -27,9 +26,16 @@ export default function Quiz() {
 					totalQuestions={totalQuestions}
 					setResultScreen={setResultScreen}
 					setActiveScreen={setActiveScreen}
+					quizIndex={quizIndex}
+					setQuizIndex={setQuizIndex}
 				/>
 			) : resultScreen && !activeScreen ? (
-				<QuizResult />
+				<QuizResult
+					maxPoints={maxPoints}
+					setQuizIndex={setQuizIndex}
+					setResultScreen={setResultScreen}
+					setActiveScreen={setActiveScreen}
+				/>
 			) : (
 				<QuizStartScreen
 					totalQuestions={totalQuestions}
