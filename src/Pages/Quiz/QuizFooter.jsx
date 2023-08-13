@@ -8,10 +8,16 @@ export default function QuizFooter({
 	setQuizIndex,
 	question,
 	setActiveOption,
+	setResultScreen,
+	setActiveScreen,
 }) {
 	const nextQuestionHandler = () => {
 		setQuizIndex(quizIndex + 1);
 		setActiveOption(null);
+	};
+	const finishQuizHandler = () => {
+		setResultScreen(true);
+		setActiveScreen(false);
 	};
 	return (
 		<div className={styles.quizFooter}>
@@ -27,7 +33,9 @@ export default function QuizFooter({
 				{totalQuestions !== quizIndex + 1 ? (
 					<button onClick={nextQuestionHandler}>Next</button>
 				) : (
-					<button>Finish</button>
+					<button className="quizFinish" onClick={finishQuizHandler}>
+						Finish
+					</button>
 				)}
 			</div>
 		</div>

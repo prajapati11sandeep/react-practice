@@ -4,7 +4,12 @@ import QuizFooter from "./QuizFooter";
 import QuizBody from "./QuizBody";
 import QuizHeader from "./QuizHeader";
 
-export default function QuizActiveScreen({ quizData, totalQuestions }) {
+export default function QuizActiveScreen({
+	quizData,
+	totalQuestions,
+	setResultScreen,
+	setActiveScreen,
+}) {
 	const [quizIndex, setQuizIndex] = useState(0);
 	const [activeOption, setActiveOption] = useState(null);
 
@@ -22,6 +27,8 @@ export default function QuizActiveScreen({ quizData, totalQuestions }) {
 				setQuizIndex={setQuizIndex}
 				question={quizData[quizIndex]}
 				setActiveOption={setActiveOption}
+				setResultScreen={setResultScreen}
+				setActiveScreen={setActiveScreen}
 			/>
 		</div>
 	);
