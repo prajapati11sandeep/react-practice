@@ -1,0 +1,200 @@
+@import "../../styles/index";
+
+.quizWrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	height: 100%;
+	width: 100%;
+	line-height: 1.5rem;
+	letter-spacing: 0.01875rem;
+
+	.quizHeader,
+	.quizFooter {
+		padding: 1.5rem;
+		background-color: #222e3c;
+	}
+	.quizHeader {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.085);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.quizLogo {
+			font-size: 1.5rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: #fff;
+			letter-spacing: 5px;
+		}
+		.quizProgress {
+			color: #fff;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			.progress {
+				width: 300px;
+				min-width: 300px;
+				background-color: #19222c;
+				border-radius: 15px;
+				height: 10px;
+				@include devices("mobile-landscape") {
+					display: none;
+				}
+				.progressBar {
+					height: 100%;
+					border-radius: 15px;
+					background-color: #1098ad;
+				}
+			}
+		}
+	}
+	.quizFooter {
+		border-top: 1px solid rgba(0, 0, 0, 0.085);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+
+		.quizTime {
+			font-size: 1.2rem;
+
+			& :global(.warning) {
+				color: red;
+			}
+		}
+
+		.quizAction {
+			button {
+				display: block;
+				font-family: inherit;
+				color: inherit;
+				font-size: 1rem;
+				border: 2px solid #1098ad;
+				background-color: #1098ad;
+				padding: 1rem 4rem;
+				cursor: pointer;
+				border-radius: 100px;
+				transition: 0.3s;
+				&:hover {
+					background-color: #0c7181;
+				}
+			}
+		}
+	}
+	.quizBody {
+		-webkit-box-flex: 2;
+		-ms-flex: 2;
+		flex: 2;
+		overflow: auto;
+		padding: 2rem;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.quizBodyInner {
+			max-width: 1200px;
+			margin: 0 auto;
+			height: 100%;
+		}
+
+		.quizOptions {
+			ul {
+				list-style: none;
+				li {
+					position: relative;
+					border-radius: 0.625rem;
+					display: inline-block;
+					width: 100%;
+					padding: 1rem 1.125rem;
+					background-color: rgba(10, 21, 32, 0.484);
+					color: rgba(255, 255, 255, 0.86);
+					font-weight: 200;
+					margin-bottom: 1rem;
+					cursor: pointer;
+					transition: 0.3s;
+					strong {
+						margin-right: 0.3rem;
+					}
+					&:hover {
+						background-color: rgb(10, 21, 32);
+					}
+					&:global(.active) {
+						background-color: rgb(20, 51, 24);
+						&::after {
+							font-family: "bootstrap-icons";
+							content: "\F270";
+							position: absolute;
+							right: 1rem;
+							color: #fff;
+							font-size: 1.3rem;
+						}
+					}
+				}
+			}
+		}
+
+		.quizQuestion {
+			border-radius: 0.625rem;
+			display: inline-block;
+			width: 100%;
+			padding: 2rem 1.125rem;
+			background-color: #0a1520;
+			color: rgba(255, 255, 255, 0.86);
+			font-weight: 200;
+			margin-bottom: 2rem;
+
+			strong {
+				margin-right: 0.3rem;
+			}
+		}
+	}
+}
+
+.StartScreen {
+	padding: 0 24px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	gap: 30px;
+	flex-direction: column;
+	h1 {
+		font-size: 3rem;
+		@include devices("mobile-landscape") {
+			font-size: 2rem;
+		}
+	}
+	h4 {
+		font-size: 1.5rem;
+		@include devices("mobile-landscape") {
+			font-size: 1rem;
+		}
+	}
+	button {
+		display: block;
+		font-family: inherit;
+		color: inherit;
+		font-size: 1rem;
+		border: 2px solid #1098ad;
+		background-color: #1098ad;
+		padding: 1rem 4rem;
+		cursor: pointer;
+		border-radius: 100px;
+		transition: 0.3s;
+		&:hover {
+			background-color: #0c7181;
+		}
+	}
+}

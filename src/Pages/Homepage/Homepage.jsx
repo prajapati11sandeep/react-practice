@@ -12,6 +12,7 @@ export default function Homepage() {
 				<div className={styles.listGroup}>
 					<NavLink to="calculator">Calculator</NavLink>
 					<NavLink to="snapshot">Snapshot</NavLink>
+					<NavLink to="quiz">Quiz</NavLink>
 				</div>
 			</div>
 		</>
