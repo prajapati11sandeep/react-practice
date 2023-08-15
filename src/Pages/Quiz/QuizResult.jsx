@@ -31,12 +31,15 @@ export default function QuizResult({
 	return (
 		<>
 			<div className={styles.quizResult}>
-				<h1>Quiz Result</h1>
-				<h4>
-					Your Score: <br />
-					<br />
-					{resultPoints}/{maxPoints} = {percentage}% {emoji}
-				</h4>
+				<div className={styles.quizResultInner}>
+					<h1>Quiz Result</h1>
+					<h4>
+						Your Score: <br />
+						<br />
+						{resultPoints}/{maxPoints} = {percentage}% {emoji}
+					</h4>
+				</div>
+				<p className={styles.copyText}>Match your answers: </p>
 				<div className={styles.quizResultWrapper}>
 					{answers.map((question) => (
 						<div className={styles.quizBody} key={question.question}>
