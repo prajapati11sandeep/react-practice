@@ -97,7 +97,7 @@
       ],
       "correctOption": 1,
       "points": 10,
-      "time": "60"
+      "time": "30"
     },
     {
       "question": "Which company invented React?",
@@ -121,7 +121,7 @@
       ],
       "correctOption": 0,
       "points": 10,
-      "time": "120"
+      "time": "30"
     },
     {
       "question": "What's the name of the syntax we use to describe the UI in React components?",
@@ -133,7 +133,7 @@
       ],
       "correctOption": 2,
       "points": 10,
-      "time": "60"
+      "time": "30"
     },
     {
       "question": "How does data flow naturally in React apps?",
@@ -253,7 +253,7 @@
       ],
       "correctOption": 0,
       "points": 30,
-      "time": "10"
+      "time": "30"
     },
     {
       "question": "When will an effect run if it doesn't have a dependency array?",
@@ -265,7 +265,7 @@
       ],
       "correctOption": 3,
       "points": 20,
-      "time": "10"
+      "time": "30"
     }
   ]
 }

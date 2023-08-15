@@ -7,13 +7,11 @@ export default function QuizFooter({
 	quizIndex,
 	setQuizIndex,
 	question,
-	setActiveOption,
 	setResultScreen,
 	setActiveScreen,
 }) {
 	const nextQuestionHandler = () => {
 		setQuizIndex(quizIndex + 1);
-		setActiveOption(null);
 	};
 	const finishQuizHandler = () => {
 		setResultScreen(true);

@@ -103,87 +103,185 @@
 			}
 		}
 	}
-	.quizBody {
-		-webkit-box-flex: 2;
-		-ms-flex: 2;
-		flex: 2;
-		overflow: auto;
-		padding: 2rem;
+}
 
-		&::-webkit-scrollbar {
-			display: none;
-		}
-
-		.quizBodyInner {
-			max-width: 1200px;
-			margin: 0 auto;
-			height: 100%;
-		}
-
-		.quizOptions {
-			ul {
-				list-style: none;
-				li {
-					position: relative;
-					border-radius: 0.625rem;
-					display: inline-block;
-					width: 100%;
-					padding: 1rem 1.125rem;
+.quizResultWrapper {
+	line-height: 1.5rem;
+	letter-spacing: 0.01875rem;
+	text-align: left;
+	max-width: 800px;
+	margin: 0 auto;
+	.quizOptions {
+		ul {
+			li {
+				margin-bottom: 1.5rem;
+				&:hover {
 					background-color: rgba(10, 21, 32, 0.484);
-					color: rgba(255, 255, 255, 0.86);
-					font-weight: 200;
-					margin-bottom: 1rem;
-					cursor: pointer;
-					transition: 0.3s;
-					strong {
-						margin-right: 0.3rem;
+					cursor: default;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&:global(.selectedAnswer) {
+					background-color: #44448c;
+					padding-right: 6rem;
+					&::after {
+						font-family: inherit;
+						content: "Your Answer";
+						position: absolute;
+						right: 1rem;
+						top: 50%;
+						transform: translateY(-50%);
+						color: #fff;
+						font-size: 0.7rem;
 					}
 					&:hover {
-						background-color: rgb(10, 21, 32);
+						background-color: #44448c !important;
+						cursor: default;
 					}
-					&:global(.active) {
+				}
+				&:global(.active) {
+					background-color: rgb(20, 51, 24);
+					padding-right: 7rem;
+					&::after {
+						font-family: inherit;
+						content: "Correct Answer";
+						font-size: 0.7rem;
+					}
+					&:hover {
 						background-color: rgb(20, 51, 24);
-						&::after {
-							font-family: "bootstrap-icons";
-							content: "\F270";
-							position: absolute;
-							right: 1rem;
-							color: #fff;
-							font-size: 1.3rem;
-						}
+						cursor: default;
 					}
-					@include devices("mobile-landscape") {
-						padding: 1rem;
-						font-size: 0.8rem;
+				}
+				&:global(.selectedAnswer.active) {
+					padding-right: 12rem;
+					&:hover {
+						background-color: rgb(20, 51, 24) !important;
+					}
+					&::after {
+						font-family: inherit;
+						content: "Your Answer & Correct Answer";
 					}
 				}
 			}
 		}
+	}
+	.quizBody {
+		border-bottom: 2px dotted rgba(255, 255, 255, 0.629);
+	}
+}
 
-		.quizQuestion {
+.quizBody {
+	-webkit-box-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+	overflow: auto;
+	padding: 2rem;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.quizBodyInner {
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+	&:global(.notAnswered) {
+		border: 2px solid rgba(255, 0, 0, 0.256);
+		padding: 0.8rem;
+		border-radius: 0.625rem;
+		&:after {
+			content: "You did not answer this question";
+			color: rgb(245, 90, 90);
+			font-size: 0.8rem;
+		}
+	}
+}
+
+.quizOptions {
+	ul {
+		list-style: none;
+		li {
+			position: relative;
 			border-radius: 0.625rem;
 			display: inline-block;
 			width: 100%;
-			padding: 2rem 1.125rem;
-			background-color: #1098ad;
+			padding: 1rem 1.125rem;
+			background-color: rgba(10, 21, 32, 0.484);
 			color: rgba(255, 255, 255, 0.86);
 			font-weight: 200;
-			margin-bottom: 2rem;
-			@include devices("mobile-landscape") {
-				padding: 1rem;
-			}
+			margin-bottom: 1rem;
+			cursor: pointer;
+			transition: 0.3s;
 			strong {
 				margin-right: 0.3rem;
+			}
+			&:hover {
+				background-color: rgb(10, 21, 32);
+			}
+			&:global(.active) {
+				background-color: rgb(20, 51, 24);
+				&::after {
+					font-family: "bootstrap-icons";
+					content: "\F270";
+					position: absolute;
+					right: 1rem;
+					top: 50%;
+					transform: translateY(-50%);
+					color: #fff;
+					font-size: 1.3rem;
+				}
+			}
+			@include devices("mobile-landscape") {
+				padding: 1rem;
+				font-size: 0.8rem;
 			}
 		}
 	}
 }
 
-.StartScreen,
-.quizResult {
-	padding: 0 24px;
+.quizQuestion {
+	border-radius: 0.625rem;
+	display: inline-block;
+	width: 100%;
+	padding: 2rem 6.125rem 2rem 1.125rem;
+	background-color: #1098ad;
+	color: rgba(255, 255, 255, 0.86);
+	font-weight: 200;
+	margin-bottom: 2rem;
+	position: relative;
+	@include devices("mobile-landscape") {
+		padding: 1rem 6.5rem;
+	}
+	strong {
+		margin-right: 0.3rem;
+	}
+	.quizPoints {
+		background-color: rgba(25, 34, 44, 0.229);
+		color: #fff;
+		position: absolute;
+		right: 1.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 0.8rem;
+		padding: 0.2rem 0.5rem;
+		border-radius: 20px;
+	}
+}
+
+.StartScreen {
 	height: 100%;
 	width: 100%;
+	padding: 0 24px;
+}
+
+.quizResult {
+	padding: 50px 24px;
+}
+
+.StartScreen,
+.quizResult {
 	display: flex;
 	align-items: center;
 	justify-content: center;
