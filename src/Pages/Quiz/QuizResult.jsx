@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Quiz.module.scss";
+import { QuizContext } from "./Helpers/Context";
 
-export default function QuizResult({
-	maxPoints,
-	setQuizIndex,
-	setResultScreen,
-	setActiveScreen,
-	answers,
-}) {
+export default function QuizResult() {
+	const { maxPoints, setQuizIndex, setResultScreen, setActiveScreen, answers } =
+		useContext(QuizContext);
+
 	const resultPoints = answers.reduce(
 		(prev, curr) =>
 			prev + (curr.selectedAnswer === curr.correctOption ? curr.points : 0),

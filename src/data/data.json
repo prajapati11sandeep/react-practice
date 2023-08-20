@@ -109,7 +109,7 @@
       ],
       "correctOption": 3,
       "points": 10,
-      "time": "30"
+      "time": "60"
     },
     {
       "question": "What's the fundamental building block of React apps?",
@@ -121,7 +121,7 @@
       ],
       "correctOption": 0,
       "points": 10,
-      "time": "30"
+      "time": "45"
     },
     {
       "question": "What's the name of the syntax we use to describe the UI in React components?",
@@ -145,7 +145,7 @@
       ],
       "correctOption": 0,
       "points": 10,
-      "time": "30"
+      "time": "60"
     },
     {
       "question": "How to pass data into a child component?",
@@ -157,7 +157,7 @@
       ],
       "correctOption": 1,
       "points": 10,
-      "time": "30"
+      "time": "20"
     },
     {
       "question": "When to use derived state?",
@@ -169,7 +169,7 @@
       ],
       "correctOption": 3,
       "points": 30,
-      "time": "30"
+      "time": "120"
     },
     {
       "question": "What triggers a UI re-render in React?",

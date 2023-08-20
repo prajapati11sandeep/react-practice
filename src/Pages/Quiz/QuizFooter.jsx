@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Quiz.module.scss";
 import QuizTimer from "./QuizTimer";
+import { QuizContext } from "./Helpers/Context";
 
-export default function QuizFooter({
-	totalQuestions,
-	quizIndex,
-	setQuizIndex,
-	question,
-	setResultScreen,
-	setActiveScreen,
-}) {
+export default function QuizFooter() {
+	const {
+		totalQuestions,
+		quizIndex,
+		setQuizIndex,
+		question,
+		setResultScreen,
+		setActiveScreen,
+	} = useContext(QuizContext);
+
 	const nextQuestionHandler = () => {
 		setQuizIndex(quizIndex + 1);
 	};

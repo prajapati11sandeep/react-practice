@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { QuizContext } from "./Helpers/Context";
 
-export default function QuizTimer({
-	question,
-	setQuizIndex,
-	quizIndex,
-	totalQuestions,
-	setResultScreen,
-	setActiveScreen,
-}) {
-	const [time, setTime] = useState(question.time);
+export default function QuizTimer() {
+	const {
+		currQuestion,
+		setQuizIndex,
+		quizIndex,
+		totalQuestions,
+		setResultScreen,
+		setActiveScreen,
+	} = useContext(QuizContext);
+
+	const [time, setTime] = useState(currQuestion.time);
 	const [warning, setWarning] = useState(false);
 
 	const mins = Math.floor(time / 60);
@@ -45,9 +48,9 @@ export default function QuizTimer({
 	);
 
 	useEffect(() => {
-		setTime(question.time);
+		setTime(currQuestion.time);
 		setWarning(false);
-	}, [question]);
+	}, [currQuestion]);
 
 	return (
 		<>

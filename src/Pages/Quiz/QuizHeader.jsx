@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Quiz.module.scss";
+import { QuizContext } from "./Helpers/Context";
 
-export default function QuizHeader({ totalQuestions, quizIndex }) {
+export default function QuizHeader() {
+	const { totalQuestions, quizIndex } = useContext(QuizContext);
+
 	const percentage = ((quizIndex + 1) * 100) / totalQuestions;
 
 	return (

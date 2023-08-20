@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Quiz.module.scss";
+import { QuizContext } from "./Helpers/Context";
 
-export default function QuizStartScreen({ totalQuestions, setActiveScreen }) {
+export default function QuizStartScreen() {
+	const { totalQuestions, setActiveScreen } = useContext(QuizContext);
+
 	return (
 		<div className={styles.StartScreen}>
 			<h1>Welcome to the React Quiz!</h1>
